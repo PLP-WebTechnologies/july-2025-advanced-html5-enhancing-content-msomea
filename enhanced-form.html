@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        header, section, footer {
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+        fieldset {
+            border: 2px solid #ddd;
+            padding: 10px;
+            border-radius: 8px;
+        }
+        legend {
+            font-weight: bold;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            width: auto;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to Our Enhanced Form</h1>
+    <p>This page demonstrates the use of lists, tables, media and a comprehensive HTML5 form.</p>
+</header>
+
+<section>
+    <h2>Our Services</h2>
+    <ul>
+        <li>Web Development</li>
+        <li>Mobile App Development</li>
+        <li>SEO Optimization</li>
+        <li>Digital Marketing</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Team Members</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Role</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Alice Johnson</td>
+                <td>Project Manager</td>
+                <td>alice@email.com</td>
+            </tr>
+            <tr>
+                <td>Bob Smith</td>
+                <td>Lead Developer</td>
+                <td>bob@email.com</td>
+            </tr>
+            <tr>
+                <td>Charlie Davis</td>
+                <td>UX/UI Designer</td>
+                <td>charlie@email.com</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<section>
+    <h2>Our Latest Project</h2>
+    <figure>
+        <img src="project-image.jpg" alt="Screenshot of our latest project" width="600">
+        <figcaption>Our latest project showcasing innovative design and functionality.</figcaption>
+    </figure>
+</section>
+
+<section>
+    <h2>Contact Us</h2>
+    <form action="/submit-form" method="POST">
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" name="first-name" required placeholder="Raphy" autocomplete="given-name">
+
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" name="last-name" required placeholder="Max" autocomplete="family-name">
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required placeholder="raphymax@email.com" autocomplete="email">
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" pattern="\d{3}[\-]\d{3}[\-]\d{4}" required placeholder="123-456-7890" autocomplete="tel">
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="bio">Short Bio:</label>
+            <textarea id="bio" name="bio" rows="4" minlength="20" required placeholder="Tell us about yourself..."></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Preferences</legend>
+            <label for="newsletter">Subscribe to Newsletter:</label>
+            <input type="checkbox" id="newsletter" name="newsletter" value="yes">
+
+            <label for="contact-method">Preferred Contact Method:</label>
+            <select id="contact-method" name="contact-method" required>
+                <option value="email">Email</option>
+                <option value="phone">Phone</option>
+                <option value="none">None</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Security</legend>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required minlength="8" placeholder="At least 8 characters">
+
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" id="confirm-password" name="confirm-password" required minlength="8" placeholder="Re-enter password">
+        </fieldset>
+
+        <input type="submit" value="Submit">
+    </form>
+</section>
+
+<footer>
+    <p>&copy; 2025. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
